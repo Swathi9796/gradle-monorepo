@@ -15,7 +15,7 @@ jobs:
          chmod +x snyk
          ls -lrt
          echo "----------Authenticating Snyk-----------"
-         ./snyk auth ${{secrets.Snyk_token}}
+         ./snyk auth ${{secrets.snyk_token}}
          echo "----------Snyk Scanning-----------"
          npm install
          ./snyk test --all-projects -d --skip-unresolved
